@@ -1,0 +1,188 @@
+// variables
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+        }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+body{
+    background-color:$Light-Gray ;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    max-height:100vh ;
+    min-width: 100vw;
+    padding: 0 250px;
+    margin-top: 100px;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+            "com com "
+            "sub about "
+            ;
+    border-radius: 10px;
+    box-shadow: 5px 6px 25px 5px rgba(0,0,0,0.2);
+
+    .div{
+        &-community{
+            grid-area: com ;
+            background-color: #fff;
+            padding: 40px 40px;
+            border-radius: 10px 10px 0 0;
+            h1{
+                color:$Cyan ;
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            p{
+                color:$Bright-Yellow ;
+                font-weight: 700;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            p:last-child{
+                color:$Grayish-Blue ;
+                font-size: 14px;
+                margin-right: 190px;
+            }
+        }
+        &-sub{
+            grid-area: sub;
+            background-color: $Cyan;
+            border-radius: 0 0 0 10px;
+            padding: 70px 20px;
+            h1{
+                font-weight: 700;
+                font-size: 20px;
+                margin-bottom: 20px;
+                margin-left: 30px;
+            }
+            p{
+                span{
+                    font-weight: 700;
+                    font-size: 32px;
+                }
+                font-weight: 400;
+                font-size: 14px;
+                margin-bottom: 10px;
+                margin-left: 30px;
+            }
+            
+            a{
+                text-decoration: none;
+                display: inline-block;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                border-radius: 10px;
+                padding: 15px 25px;
+                margin: 30px  30px 0  ;
+                background-color: $Bright-Yellow;
+            }
+        
+        }
+        &-about{
+            grid-area: about;
+            background-color:hsl(179, 56%, 55%); ;
+            border-radius: 0 0 10px 0;
+            padding: 70px 20px;
+            h1{
+                font-weight: 700;
+                font-size: 20px;
+                margin-left: 30px;
+                margin-bottom: 10px;
+
+
+            }
+            p{
+                font-weight: 400;
+                margin-left: 30px;
+                font-size: 16px;
+
+            }
+            p span {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px){
+    body{
+        min-height: 100vh;
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+    
+    main{
+        grid-template-areas: 
+                "com "
+                "sub  "
+                "about"
+                ;
+                
+            
+
+                .div{
+                    &-community{
+                        padding: 40px 20px;
+                        h1{
+
+                            margin-bottom: 5px;
+                        }
+                        p{
+
+                            margin-bottom: 10px;
+                        }
+                        p:last-child{
+
+                            margin-right: 10px;
+                        }
+                    }
+                    &-sub{
+                        padding: 40px 20px;
+                        h1 {
+                            margin-left: 5px;
+                        }
+                        p{
+                            margin-left: 5px;
+                        }
+                        a{
+                            margin: 0 5px 0;
+                        }
+                    }
+                    &-about{
+                        padding: 40px 20px;
+
+                    }
+
+            
+
+            }
+
+
+
+    
+}}
