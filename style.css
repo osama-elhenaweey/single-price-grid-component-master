@@ -23,22 +23,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
-  min-width: 100vw;
-  padding: 0 250px;
-  margin-top: 100px;
+  min-height: 100vh;
 }
 
 main {
   display: grid;
   grid-template-areas: "com com " "sub about ";
   border-radius: 10px;
+  max-width: 800px;
   box-shadow: 5px 6px 25px 5px rgba(0, 0, 0, 0.2);
 }
 main .div-community {
   grid-area: com;
   background-color: #fff;
-  padding: 40px 40px;
+  padding: 2rem;
   border-radius: 10px 10px 0 0;
 }
 main .div-community h1 {
@@ -53,16 +51,18 @@ main .div-community p {
   font-size: 20px;
   margin-bottom: 10px;
 }
+main .div-community p span{
+  display: block;
+}
 main .div-community p:last-child {
   color: hsl(218deg, 22%, 67%);
   font-size: 14px;
-  margin-right: 190px;
 }
 main .div-sub {
   grid-area: sub;
   background-color: hsl(179deg, 62%, 43%);
   border-radius: 0 0 0 10px;
-  padding: 70px 20px;
+  padding: 2rem;
 }
 main .div-sub h1 {
   font-weight: 700;
@@ -95,8 +95,7 @@ main .div-about {
   grid-area: about;
   background-color: hsl(179deg, 56%, 55%);
   border-radius: 0 0 10px 0;
-  padding: 70px 20px;
-}
+  padding: 2rem;}
 main .div-about h1 {
   font-weight: 700;
   font-size: 20px;
@@ -116,7 +115,7 @@ main .div-about p span {
   body {
     min-height: 100vh;
     padding: 0 20px;
-    margin-top: 50px;
+    margin: 2rem;
   }
   main {
     grid-template-areas: "com " "sub  " "about";
@@ -126,6 +125,7 @@ main .div-about p span {
   }
   main .div-community h1 {
     margin-bottom: 5px;
+    font-size: 22px;
   }
   main .div-community p {
     margin-bottom: 10px;
@@ -134,9 +134,10 @@ main .div-about p span {
     margin-right: 10px;
   }
   main .div-sub {
-    padding: 40px 20px;
+    border-radius: 0;
   }
   main .div-sub h1 {
+    font-size: 18px;
     margin-left: 5px;
   }
   main .div-sub p {
@@ -145,7 +146,11 @@ main .div-about p span {
   main .div-sub a {
     margin: 0 5px 0;
   }
-  main .div-about {
-    padding: 40px 20px;
+  main .div-about{
+    border-radius: 0 0 10px 10px;
+  }
+
+  main .div-about p span,main .div-community p span {
+    display: inline;
   }
 }/*# sourceMappingURL=style.css.map */
